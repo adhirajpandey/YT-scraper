@@ -1,26 +1,27 @@
-# YT-subscriptions-scraper
+# YT-scraper
 
 # Description
 
-This Script allows you to generate structured txt and csv file of Youtube Subscriptions of a user.
+This Script allows you to generate structured txt and csv file of Youtube Subscriptions as well as Youtube Watch Later Playlist videos of a user.
 
-This Script uses saved html file of your subscriptions page and BeautifulSoup to parse it structurally to implement the objective.
+This Script uses saved html file of your subscriptions/watch-later page and BeautifulSoup to parse it structurally to implement the objective.
   
 # Requirements
 
 - python3
 - pip3
 - BeautifulSoup
+- csv
 
 # Usage
 
-1. Go to `https://www.youtube.com/feed/channels`(make sure you are logged in) and scroll to bottom of the page.
+1. Go to `https://www.youtube.com/feed/channels` OR `https://www.youtube.com/playlist?list=WL`(make sure you are logged in) and scroll to bottom of the page.
 2. Save html of the page by right-clicking in browser window and select `save as` to download it in your computer.
-3. Clone this project `git clone https://github.com/adhirajpandey/YT-subscriptions-scraper` and cd into it `cd YT-subscriptions-scraper`
+3. Clone this project `git clone https://github.com/adhirajpandey/YT-scraper` and cd into it `cd YT-subscriptions-scraper`
 4. Install Requirement `pip install bs4`
-5. Modify `main.py` to modify the path of your saved html file of your subscriptions page.
-6. Run Script `python main.py` or `python3 main.py`
-7. Check `subscriptions.txt` and `subscriptions.csv` for the output.
+5. Modify `subs.py` or `watch-later.py to modify the path of your saved html file of your page.
+6. Run Script
+7. Check directory for the output.
 
 # Sample
 
