@@ -1,5 +1,14 @@
+#USER CONFIG
+
+SUBSCRIPTIONS_HTML = '[path/filename].html' # Path to subscriptions html file
+txt = 0 # 0 = no, 1 = yes
+csv = 1 # 0 = no, 1 = yes
+
+#IMPORT LIBRARIES
+
 from bs4 import BeautifulSoup
 import csv
+
 
 #FUNCTION DEFINITIONS
 
@@ -64,17 +73,18 @@ def write_csv_file(channel_names):
 
 if __name__ == "__main__":
     
-    #opening html file (write path to html file here)
-    PATH_TO_HTML_FILE = "C:\\Users\\**\\change\\this\\accordingly\\subs.html"
-    html = open(PATH_TO_HTML_FILE, encoding='utf-8').read()
+    html = open(SUBSCRIPTIONS_HTML, encoding='utf-8').read()
 
-
-    #calling functions
     channel_names = parsehtml(html)
 
-    write_txt_file(channel_names)
-
-    write_csv_file(channel_names)
-
+    if txt == 1:
+        write_txt_file(channel_names)
+    
+    if csv == 1:
+        write_csv_file(channel_names)
+    
+    if txt == 0 and csv == 0:
+        print("Enter valid option")
+    
     print("Program executed successfully")
 
