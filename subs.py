@@ -1,8 +1,8 @@
 #USER CONFIG
 
-SUBSCRIPTIONS_HTML = '[path/filename].html' # Path to subscriptions html file
-txt = 0 # 0 = no, 1 = yes
-csv = 1 # 0 = no, 1 = yes
+SUBSCRIPTIONS_HTML = 'subs.html' # Path to subscriptions html file
+TXT_FILE = 1 # 0 = no, 1 = yes
+CSV_FILE = 1 # 0 = no, 1 = yes
 
 #IMPORT LIBRARIES
 
@@ -77,13 +77,13 @@ if __name__ == "__main__":
 
     channel_names = parsehtml(html)
 
-    if txt == 1:
+    if TXT_FILE == 1:
         write_txt_file(channel_names)
     
-    if csv == 1:
+    if CSV_FILE == 1:
         write_csv_file(channel_names)
     
-    if txt == 0 and csv == 0:
+    if TXT_FILE == 0 and CSV_FILE == 0:
         print("Enter valid option")
     
     print("Program executed successfully")

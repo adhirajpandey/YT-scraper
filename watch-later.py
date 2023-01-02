@@ -1,8 +1,8 @@
 #USER CONFIG
 
-WATCH_LATER_HTML = 'wl.html' # Path to watch later html file
+WATCH_LATER_HTML = '[filepath].html' # Path to watch later html file
 TXT_FILE = 1 # 0 = no, 1 = yes
-CSV_FILE = 0 # 0 = no, 1 = yes
+CSV_FILE = 1 # 0 = no, 1 = yes
 
 #IMPORT LIBRARIES
 
@@ -50,7 +50,7 @@ if __name__ == '__main__':
     if TXT_FILE == 1:
         write_to_txt(data)
     
-    elif CSV_FILE == 1:
+    if CSV_FILE == 1:
         write_to_csv(data)
 
     elif TXT_FILE == 0 and CSV_FILE == 0:
