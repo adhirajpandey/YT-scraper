@@ -22,6 +22,7 @@ This Script uses saved html file of your subscriptions/watch-later page and Beau
 5. Modify `subs.py` or `watch-later.py to modify the path of your saved html file of your page.
 6. Run Script
 7. Check directory for the output.
+8. Edit `clear-playlist.py` as per your need and run it to clear your playlists.
 
 # Sample
 
